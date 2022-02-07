@@ -62,8 +62,6 @@ int main()
 
 
 
-
-
 // RECEIVING AND SENDING data back and forth between the client and server socket
     cout << "Care to have a conversation with the SERVER?" << endl;
 
@@ -105,7 +103,6 @@ int main()
                 break;
             }
     }
-
 
     return 0;
 
