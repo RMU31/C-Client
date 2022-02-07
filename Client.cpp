@@ -79,7 +79,7 @@ int main()
             if (strcmp(sendServerMessage, "QUIT")== 0) {
 
             }
-            else if (strlen(sendServerMessage) < 500) {
+            else if (strlen(sendServerMessage) > 500) {
                 throw clientException;
             }
         }
@@ -93,15 +93,24 @@ int main()
 
         char receiveServerMessage[500];
         int byteCount = recv(clientSock, receiveServerMessage, 500, 0);
-        if (byteCount < 0)
-            cout << "No message has been received from the server :(" << endl;
-        else
-            cout << "Server has sent you a message back:" << receiveServerMessage << endl;
+        try {
+            if (byteCount < 0)
+                cout << "No message has been received from the server :(" << endl;
+            else
+                cout << "Server has sent you a message back:" << receiveServerMessage << endl;
             if (strcmp(receiveServerMessage, "QUIT")== 0) {
                 cout << "Client Socket is Closed" << endl;
                 close(clientSock);
                 break;
             }
+            else if (strlen(sendServerMessage) > 500) {
+                throw clientException;
+            }
+        }
+        catch(ClientException e) {
+            cout << "Exception: " << e.what() << endl;
+            break;
+        }
     }
 
     return 0;
