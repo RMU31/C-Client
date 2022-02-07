@@ -78,6 +78,18 @@ build CMakeFiles/Client.dir/Client.cpp.o: CXX_COMPILER__Client_Debug /Users/rmu3
   OBJECT_DIR = CMakeFiles/Client.dir
   OBJECT_FILE_DIR = CMakeFiles/Client.dir
 
+build CMakeFiles/Client.dir/Server.cpp.o: CXX_COMPILER__Client_Debug /Users/rmu31/Uni-Workspace/C++Assingment/Client/Server.cpp || cmake_object_order_depends_target_Client
+  DEP_FILE = CMakeFiles/Client.dir/Server.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Client.dir
+  OBJECT_FILE_DIR = CMakeFiles/Client.dir
+
+build CMakeFiles/Client.dir/Main.cpp.o: CXX_COMPILER__Client_Debug /Users/rmu31/Uni-Workspace/C++Assingment/Client/Main.cpp || cmake_object_order_depends_target_Client
+  DEP_FILE = CMakeFiles/Client.dir/Main.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Client.dir
+  OBJECT_FILE_DIR = CMakeFiles/Client.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Client
@@ -86,7 +98,7 @@ build CMakeFiles/Client.dir/Client.cpp.o: CXX_COMPILER__Client_Debug /Users/rmu3
 #############################################
 # Link the executable Client
 
-build Client: CXX_EXECUTABLE_LINKER__Client_Debug CMakeFiles/Client.dir/Client.cpp.o
+build Client: CXX_EXECUTABLE_LINKER__Client_Debug CMakeFiles/Client.dir/Client.cpp.o CMakeFiles/Client.dir/Server.cpp.o CMakeFiles/Client.dir/Main.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15
   OBJECT_DIR = CMakeFiles/Client.dir
   POST_BUILD = :

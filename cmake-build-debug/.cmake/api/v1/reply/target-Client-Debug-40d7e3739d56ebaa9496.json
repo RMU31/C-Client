@@ -52,7 +52,9 @@
 			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				3,
+				5
 			]
 		}
 	],
@@ -85,7 +87,9 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				3,
+				5
 			]
 		},
 		{
@@ -93,7 +97,9 @@
 			"sourceIndexes" : 
 			[
 				1,
-				2
+				2,
+				4,
+				6
 			]
 		}
 	],
@@ -113,6 +119,28 @@
 		{
 			"backtrace" : 1,
 			"path" : "stdafx.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Server.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Server.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Main.h",
 			"sourceGroupIndex" : 1
 		}
 	],
